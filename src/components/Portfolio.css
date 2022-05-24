@@ -65,3 +65,75 @@ section::after {
   margin: 1em auto auto auto;
   text-align: left;
 }
+
+.description-text h1:nth-child(1) {
+  color: #355c7d;
+  font-family: "Fira Code", monospace;
+  font-weight: 800;
+  font-size: 20px;
+  margin: 0;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 170px;
+  animation: type 2s steps(40, end) forwards;
+}
+
+.description-text h1:nth-child(2) {
+  white-space: nowrap;
+  opacity: 0;
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #20c490, #028db0);
+  font-weight: 800;
+  font-size: 2em;
+  width: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  overflow: hidden;
+  animation: string-animation 2.2s steps(40, end) 2s forwards,
+    blink 0.5s step-end infinite alternate;
+
+}
+
+@keyframes string-animation {
+  0% {
+    /* background-position: 0 0; */
+    opacity: 0;
+    width: 0;
+  }
+  1% {
+    /* background-position: 0 0; */
+    opacity: 1;
+    border-right: 2px solid #a5a5a5;
+  }
+  50% {
+    /*background-position: 150px 0;*/
+    opacity: 1;
+    border-right: 2px solid #a5a5a5;
+  }
+  100% {
+    /* background-position: 400px 0; */
+    opacity: 1;
+    border-right: 2px solid #a5a5a5;
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  1%,
+  99% {
+    border-right: 2px solid #a5a5a5;
+  }
+  100% {
+    border-right: none;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
