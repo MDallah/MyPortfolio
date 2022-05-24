@@ -1,10 +1,13 @@
 import { defineComponent } from 'vue';
+import { MDBCol, MDBRow, MDBCard } from "mdb-vue-ui-kit";
 import { magicMouse } from "magicmouse.js";
 
 export default defineComponent({
     name: 'Portfolio',
-    props: {
-        msg: String,
+    components: {
+        MDBCol,
+        MDBRow,
+        MDBCard,
     },
     mounted() {
         window.document.body.style.backgroundColor = "#b08b78";
