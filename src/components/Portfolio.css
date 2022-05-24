@@ -35,7 +35,7 @@ section::after {
   align-items: center;
   flex-wrap: wrap;
   padding: 1em 1em;
-  width: 65%;
+  width: 70%;
 }
 
 .container .card {
@@ -160,6 +160,11 @@ section::after {
   opacity: 1;
   word-wrap: initial;
   border-radius: 3px;
+}
+
+.logos {
+  margin: 1em;
+  opacity: 1;
 }
 
 .p-card#p-card {

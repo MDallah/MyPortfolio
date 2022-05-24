@@ -61,6 +61,7 @@
               v-for="skill in skills"
               :key="skill.index"
             >
+              <img :src="'/img/logos/' + skill.logo" class="logos" />
               {{ skill.name }}
             </MDBCard>
           </div>
