@@ -35,7 +35,7 @@ section::after {
   align-items: center;
   flex-wrap: wrap;
   padding: 1em 1em;
-  width: 100%;
+  width: 70%;
 }
 
 .container .card {
@@ -47,17 +47,23 @@ section::after {
   display: flex;
   justify-content: center;
   padding: 6em;
+  margin-bottom: 4em;
   opacity: 1;
   word-wrap: initial;
 }
 
 .font {
   color: #355c7d;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .blod {
   font-weight: bold;
+}
+
+.myImg {
+  transform: scaleX(-1);
+  filter: contrast(180%);
 }
 
 .description-text {
@@ -93,7 +99,6 @@ section::after {
   overflow: hidden;
   animation: string-animation 2.2s steps(40, end) 2s forwards,
     blink 0.5s step-end infinite alternate;
-
 }
 
 @keyframes string-animation {
@@ -136,4 +141,23 @@ section::after {
   50% {
     border-color: transparent;
   }
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.skillscard#skillscard {
+  background-color: #ffffff0f;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  border: #00000038 solid 1px;
+  text-align: center;
+  width: 8em;
+  padding: 0.1em;
+  margin: 2em;
+  opacity: 1;
+  word-wrap: initial;
+  border-radius: 3px;
 }

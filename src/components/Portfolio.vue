@@ -1,13 +1,12 @@
 <template>
   <section>
     <div class="container">
-
       <MDBCard class="card">
         <MDBRow>
           <MDBCol md="4">
             <img
               src="../assets/developer.png"
-              class="img-fluid imgPadding"
+              class="img-fluid myImg"
               alt="..."
             />
           </MDBCol>
@@ -18,7 +17,7 @@
                 <h1>Hi, my name is</h1>
                 <h1>Mohammad Dallah.</h1>
               </div>
-              
+
               <h5 class="blod">Developer</h5>
               <br />
 
@@ -41,7 +40,7 @@
                 </MDBRow>
                 <MDBRow>
                   <MDBCol class="blod" md="3">Email:</MDBCol>
-              <MDBCol md="6">muhammaddallah093@gmail.com</MDBCol>
+                  <MDBCol md="6">muhammaddallah093@gmail.com</MDBCol>
                 </MDBRow>
               </div>
             </div>
@@ -49,6 +48,22 @@
         </MDBRow>
       </MDBCard>
 
+      <MDBCard class="card">
+        <div class="font">
+          <h5 class="blod">Skills</h5>
+          <br />
+          <div class="skills">
+            <MDBCard
+              id="skillscard"
+              class="skillscard blod"
+              v-for="skill in skills"
+              :key="skill.index"
+            >
+              {{ skill.name }}
+            </MDBCard>
+          </div>
+        </div>
+      </MDBCard>
     </div>
   </section>
 </template>

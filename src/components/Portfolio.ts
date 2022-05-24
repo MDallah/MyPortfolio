@@ -2,12 +2,42 @@ import { defineComponent } from 'vue';
 import { MDBCol, MDBRow, MDBCard } from "mdb-vue-ui-kit";
 import { magicMouse } from "magicmouse.js";
 
+
+const skills: any = [
+    { name: "HTML5" },
+    { name: "CSS3" },
+    { name: "Node.js" },
+    { name: "TypeScript" },
+    { name: "JavaScript" },
+    { name: "Vue.js" },
+    { name: "Golang" },
+    { name: "C#" },
+    { name: "Arduino" },
+    { name: "Raspberry PI" },
+    { name: "Linux" },
+    { name: "MySQL" },
+    { name: "Ionic" },
+    { name: "Capacitor" },
+    { name: "Cordova" },
+    { name: "IoT" },
+    { name: "LoRa" },
+    { name: "LoRaWAN" },
+    { name: "Github" },
+    { name: "Gitlab" },
+    { name: "Electron" },
+];
+
 export default defineComponent({
     name: 'Portfolio',
     components: {
         MDBCol,
         MDBRow,
         MDBCard,
+    },
+    data() {
+        return {
+            skills,
+        };
     },
     mounted() {
         window.document.body.style.backgroundColor = "#b08b78";
