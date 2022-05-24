@@ -35,7 +35,7 @@ section::after {
   align-items: center;
   flex-wrap: wrap;
   padding: 1em 1em;
-  width: 70%;
+  width: 65%;
 }
 
 .container .card {
@@ -150,7 +150,7 @@ section::after {
 }
 
 .skillscard#skillscard {
-  background-color: #ffffff0f;
+  background-color: #ffffff09;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   border: #00000038 solid 1px;
   text-align: center;
@@ -160,4 +160,59 @@ section::after {
   opacity: 1;
   word-wrap: initial;
   border-radius: 3px;
+}
+
+.p-card#p-card {
+  background-color: #ffffff09;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  border: #00000038 solid 1px;
+  width: auto;
+  margin: 2em 2em 0 0;
+  padding: 1em;
+  word-wrap: initial;
+  border-radius: 6px;
+}
+
+.p-img {
+  width: 20em;
+  height: 20em;
+  border-radius: 5px;
+}
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* border: 3px solid rgb(64, 64, 64); */
+  background-color: rgba(255, 255, 255, 0.204);
+  padding: 3em;
+  z-index: 1;
+}
+
+#modal-img {
+  justify-content: center;
+  max-width: 95vw;
+  max-height: 95vh;
+  z-index: 2;
+  border-radius: 0.5em;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#modal-close {
+  opacity: 0.7;
+  position: fixed;
+  top: 2em;
+  right: 2em;
+  height: 2em;
+  width: 2em;
+  border-radius: 5px;
+  background-color: #ffffff7f;
+  z-index: 3;
 }

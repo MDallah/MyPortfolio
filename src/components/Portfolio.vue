@@ -39,8 +39,10 @@
                   <MDBCol class="align-self-end" md="8">Lonsee, Germany</MDBCol>
                 </MDBRow>
                 <MDBRow>
-                  <MDBCol class="blod" md="3">Email:</MDBCol>
-                  <MDBCol md="6">muhammaddallah093@gmail.com</MDBCol>
+                  <MDBCol class="blod" md="4">Email:</MDBCol>
+                  <MDBCol class="align-self-end" md="8">
+                    muhammaddallah093@gmail.com
+                  </MDBCol>
                 </MDBRow>
               </div>
             </div>
@@ -60,6 +62,47 @@
               :key="skill.index"
             >
               {{ skill.name }}
+            </MDBCard>
+          </div>
+        </div>
+      </MDBCard>
+
+      <MDBCard class="card">
+        <div class="font">
+          <h5 class="blod">Projects</h5>
+          <br />
+          <div>
+            <MDBCard
+              id="p-card"
+              class="p-card"
+              v-for="(project, index) in projects"
+              :key="index"
+            >
+              <h5 class="blod">{{ project.name }} ({{ project.languages }})</h5>
+              <br />
+              <MDBRow>
+                <MDBCol md="6">
+                  <img
+                    :src="'/img/' + project.img"
+                    v-bind:alt="project.img"
+                    class="img-fluid p-img"
+                    @click.stop="displayModalfunc(index)"
+                  />
+                  <div id="modal" v-if="displayModal && index === imgIndex">
+                    <!-- <h1 @click="displayModal = false">x</h1> -->
+                    <div>
+                      <img id="modal-img" :src="'/img/' + project.img" />
+                      <img
+                        id="modal-close"
+                        src="../assets/X.png"
+                        @click.stop="hideModalfunc()"
+                      />
+                    </div>
+                  </div>
+                  <!-- <button @click.stop="displayModal = true">open modal</button> -->
+                </MDBCol>
+                <MDBCol md="6">{{ project.discription }}</MDBCol>
+              </MDBRow>
             </MDBCard>
           </div>
         </div>
