@@ -38,6 +38,25 @@ section::after {
   width: 70%;
 }
 
+.navbar {
+  padding: 1em !important;
+}
+
+#navbar {
+  background: transparent !important;
+  display: contents;
+}
+
+.space {
+  width: 30em;
+}
+
+.navIcon {
+  /* display: flex; */
+  display: none;
+  margin: 0 1em !important;
+}
+
 .container .card {
   position: relative;
   width: 100%;

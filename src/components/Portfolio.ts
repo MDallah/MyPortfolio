@@ -1,5 +1,7 @@
-import { defineComponent } from 'vue';
-import { MDBCol, MDBRow, MDBCard } from "mdb-vue-ui-kit";
+import { defineComponent, ref } from 'vue';
+import {
+    MDBCol, MDBRow, MDBCard, MDBBtn, MDBSwitch, MDBNavbar, MDBNavbarBrand, MDBIcon
+} from "mdb-vue-ui-kit";
 import { magicMouse } from "magicmouse.js";
 
 
@@ -56,6 +58,11 @@ export default defineComponent({
         MDBCol,
         MDBRow,
         MDBCard,
+        MDBBtn,
+        MDBSwitch,
+        MDBNavbar,
+        MDBNavbarBrand,
+        MDBIcon,
     },
     data() {
         return {
@@ -82,6 +89,22 @@ export default defineComponent({
                 window.document.body.style.overflow = "auto";
 
             }
+        },
+        navToHome() {
+            const Home: any = document.getElementById('Home');
+            Home.scrollIntoView({ behavior: 'auto' });
+        },
+        navToSkills() {
+            const Skills: any = document.getElementById('Skills');
+            Skills.scrollIntoView({ behavior: 'auto' });
+        },
+        navToProjects() {
+            const Projects: any = document.getElementById('Projects');
+            Projects.scrollIntoView({ behavior: 'auto' });
+        },
+        navToContactMe() {
+            const ContactMe: any = document.getElementById('ContactMe');
+            ContactMe.scrollIntoView({ behavior: 'auto' });
         },
     },
     mounted() {
@@ -112,5 +135,11 @@ export default defineComponent({
             Pointer.style.zIndex = "2";
         }
         // magicMouse .................................
-    }
+    },
+    setup() {
+        const switchDM = ref(true);
+        return {
+            switchDM
+        }
+    },
 });

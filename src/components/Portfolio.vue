@@ -1,7 +1,36 @@
 <template>
   <section>
     <div class="container">
-      <MDBCard class="card">
+      <MDBCard class="card navbar blod">
+        <MDBNavbar id="navbar" light bg="light" container>
+          <div @click="navToHome()">Home</div>
+          <div @click="navToSkills()">Skills</div>
+          <div @click="navToProjects()">Projects</div>
+          <div @click="navToContactMe()">Contact</div>
+          <div class="space"></div>
+          <div class="d-flex input-group w-auto">
+            <div class="navIcon">
+              <MDBIcon
+                icon="language"
+                iconStyle="fas"
+                size="lg"
+                style="margin: 0.3em 0"
+              />
+            </div>
+            <div class="navIcon">
+              <MDBIcon
+                icon="moon"
+                iconStyle="fas"
+                size="lg"
+                style="margin: 0.3em 0.3em 0.3em 0"
+              />
+              <MDBSwitch v-model="switchDM" />
+            </div>
+          </div>
+        </MDBNavbar>
+      </MDBCard>
+
+      <MDBCard id="Home" class="card">
         <MDBRow>
           <MDBCol md="4">
             <img
@@ -50,7 +79,7 @@
         </MDBRow>
       </MDBCard>
 
-      <MDBCard class="card">
+      <MDBCard id="Skills" class="card">
         <div class="font">
           <h5 class="blod">Skills</h5>
           <br />
@@ -68,7 +97,7 @@
         </div>
       </MDBCard>
 
-      <MDBCard class="card">
+      <MDBCard id="Projects" class="card">
         <div class="font">
           <h5 class="blod">Projects</h5>
           <br />
