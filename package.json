@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "core-js": "^3.8.3",
     "magicmouse.js": "^1.2.1",
     "mdb-vue-ui-kit": "^1.13.0",

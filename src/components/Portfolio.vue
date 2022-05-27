@@ -137,6 +137,50 @@
           </div>
         </div>
       </MDBCard>
+
+      <MDBCard id="ContactMe" class="card">
+        <div class="font">
+          <h5 class="blod">Contact me</h5>
+          <br />
+          <form ref="form" @submit.prevent="sendEmail">
+            <!-- Name input -->
+            <MDBInput
+              type="text"
+              label="Name"
+              name="from_name"
+              wrapperClass="mb-4"
+            />
+
+            <!-- Email input -->
+            <MDBInput
+              type="email"
+              label="Email address"
+              name="from_email"
+              wrapperClass="mb-4"
+            />
+
+            <!-- Subject input -->
+            <MDBInput
+              type="text"
+              label="Subject"
+              name="subject"
+              wrapperClass="mb-4"
+            />
+
+            <!-- Message input -->
+            <MDBTextarea
+              label="Message"
+              name="message"
+              id="formMsg"
+              v-model="formMsg"
+              wrapperClass="mb-4"
+            />
+
+            <!-- Submit button -->
+            <MDBBtn color="primary" block class="mb-4" type="submit">{{ btnValue }}</MDBBtn>
+          </form>
+        </div>
+      </MDBCard>
     </div>
   </section>
 </template>

@@ -1,8 +1,12 @@
 import { defineComponent, ref } from 'vue';
 import {
-    MDBCol, MDBRow, MDBCard, MDBBtn, MDBSwitch, MDBNavbar, MDBNavbarBrand, MDBIcon
+    MDBCol, MDBRow, MDBCard,
+    MDBBtn, MDBSwitch, MDBNavbar,
+    MDBNavbarBrand, MDBIcon, MDBInput,
+    MDBCheckbox, MDBTextarea
 } from "mdb-vue-ui-kit";
 import { magicMouse } from "magicmouse.js";
+import emailjs from '@emailjs/browser';
 
 
 const skills: any = [
@@ -63,6 +67,9 @@ export default defineComponent({
         MDBNavbar,
         MDBNavbarBrand,
         MDBIcon,
+        MDBInput,
+        MDBCheckbox,
+        MDBTextarea
     },
     data() {
         return {
@@ -70,6 +77,7 @@ export default defineComponent({
             projects,
             imgIndex: 0,
             displayModal: false,
+            btnValue: "Send",
         };
     },
     methods: {
@@ -106,6 +114,38 @@ export default defineComponent({
             const ContactMe: any = document.getElementById('ContactMe');
             ContactMe.scrollIntoView({ behavior: 'auto' });
         },
+        sendEmail() {
+            this.$data.btnValue = "Sending...";
+            // muhammaddallah093
+            // const serviceID = 'default_service';
+            // const templateID = 'template_md-p';
+            // const publicKey = '0_ilaRpHbRPu01w1f';
+
+            // mdtest093
+            const serviceID = 'service_md-p-test';
+            const templateID = 'template_uoqrl6n';
+            const publicKey = 'zNe5aa_VaIq88vNDi';
+
+            this.formMsg = this.formMsg.replace(/\n/g, "<br />",)
+
+            //wait 1 seconds before sending email
+            setTimeout(() => {
+                emailjs.sendForm(serviceID, templateID, this.$refs.form as HTMLFormElement, publicKey)
+                    .then((result: any) => {
+                        console.log('SUCCESS!', result.text);
+                        this.$data.btnValue = "Email sent";
+                        // alert('Sent!');
+                    }, (error: any) => {
+                        console.log('FAILED...', error.text);
+                        alert(JSON.stringify(error));
+                    });
+            }, 500);
+
+            //wait 5 seconds 
+            setTimeout(() => { this.$data.btnValue = "Send"; }, 10000);
+
+        }
+
     },
     mounted() {
         window.addEventListener("click", this.onClickOutside);
@@ -135,11 +175,43 @@ export default defineComponent({
             Pointer.style.zIndex = "2";
         }
         // magicMouse .................................
+
+        // Email .................................
+        // const btn = document.getElementById('send') as HTMLInputElement;
+        // const form = document.getElementById('form');
+        // if (form != null) {
+        //     form.addEventListener('submit', function (event) {
+        //         event.preventDefault();
+        //         if (btn != null) {
+
+        //             btn.value = 'Sending...';
+
+        //             const serviceID = 'default_service';
+        //             const templateID = 'template_md-p';
+
+        //             emailjs.sendForm(serviceID, templateID, this.$)
+        //                 .then(() => {
+        //                     btn.value = 'Send Email';
+        //                     alert('Sent!');
+        //                 }, (err: any) => {
+        //                     btn.value = 'Send Email';
+        //                     alert(JSON.stringify(err));
+        //                 });
+        //         }
+        //     });
+        // }
     },
     setup() {
         const switchDM = ref(true);
+        const formName = ref("");
+        const formEmail = ref("");
+        const formMsg = ref("");
+
         return {
-            switchDM
+            switchDM,
+            formName,
+            formEmail,
+            formMsg,
         }
     },
 });
