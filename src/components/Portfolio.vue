@@ -22,9 +22,9 @@
                 icon="moon"
                 iconStyle="fas"
                 size="lg"
-                style="margin: 0.3em 0.3em 0.3em 0"
+                style="margin: 0.3em 0"
               />
-              <MDBSwitch v-model="switchDM" />
+              <MDBSwitch v-model="switchDM" style="margin: 0.3em" />
             </div>
           </div>
         </MDBNavbar>
@@ -39,8 +39,8 @@
               alt="..."
             />
           </MDBCol>
-          <MDBCol md="2"></MDBCol>
-          <MDBCol md="6">
+          <MDBCol md="1"></MDBCol>
+          <MDBCol md="7">
             <div class="description font">
               <div class="description-text">
                 <h1>Hi, my name is</h1>
@@ -52,7 +52,7 @@
 
               <div class="font">
                 <MDBRow>
-                  <MDBCol class="blod" md="4">Comes from:</MDBCol>
+                  <MDBCol class="blod" md="4">Origin:</MDBCol>
                   <MDBCol class="align-self-end" md="8">Palestine</MDBCol>
                 </MDBRow>
                 <MDBRow>
@@ -177,7 +177,9 @@
             />
 
             <!-- Submit button -->
-            <MDBBtn color="primary" block class="mb-4" type="submit">{{ btnValue }}</MDBBtn>
+            <MDBBtn color="primary" block class="mb-4" type="submit">
+              {{ btnValue }}
+            </MDBBtn>
           </form>
         </div>
       </MDBCard>

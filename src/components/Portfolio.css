@@ -1,3 +1,51 @@
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 1em 0 !important;
+    justify-content: left !important;
+  }
+
+  .container {
+    width: 100% !important;
+  }
+
+  .font {
+    font-size: 0.9rem !important;
+  }
+
+  .container .card {
+    padding: 1em !important;
+  }
+
+  .description-text h1:nth-child(2) {
+    font-size: 1.5em !important;
+  }
+
+  .skillscard#skillscard {
+    margin: 0.5em !important;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .navbar {
+    padding: 1em 0 !important;
+    justify-content: left !important;
+  }
+
+  .container {
+    width: 90% !important;
+  }
+
+  .font {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .navbar {
+    padding: 1em 0 !important;
+    justify-content: left !important;
+  }
+}
 /* Background ................................. */
 section::before {
   content: "";
@@ -35,11 +83,17 @@ section::after {
   align-items: center;
   flex-wrap: wrap;
   padding: 1em 1em;
+  margin: 0 auto;
   width: 70%;
 }
 
 .navbar {
-  padding: 1em !important;
+  padding: 1em 0 !important;
+  justify-content: left;
+}
+
+.navbar div {
+  padding: 0 0.5em !important;
 }
 
 #navbar {
@@ -54,7 +108,7 @@ section::after {
 .navIcon {
   /* display: flex; */
   display: none;
-  margin: 0 1em !important;
+  /* margin: 0 1em !important; */
 }
 
 .container .card {
@@ -85,6 +139,9 @@ section::after {
   filter: contrast(180%);
 }
 
+.description {
+  white-space: nowrap;
+}
 .description-text {
   display: inline-block;
   margin: 1em auto auto auto;
