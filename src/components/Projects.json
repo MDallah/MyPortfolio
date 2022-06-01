@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Sensor Observer",
+    "by": "By FABMation GmbH",
+    "languages": "Vue.js / TypeScript / CSS / Node.js / Raspberry PI / IoT / MQTT / WebSocket / LoRa / LoRaWAN / Electron.js",
+    "img": "Sensors Observer.png",
+    "discription": "IoT project that uses LoRa Gateway to collect data from LoRa sensors and send it to Single Board Computer (Raspberry PI 4) using MQTT. The Raspberry PI 4 analyzes the data and prepares it to send to the client using a WebSocket. A web page will also be hosted using Raspberry PI 4 to fetch the data and present it to the client."
+  },
+  {
+    "name": "FAB-Smart-Home-System",
+    "by": "Vocational Training Graduation Project",
+    "languages": "Arduino / HTML / JavaScript / CSS / Node.js",
+    "img": "FSHS.png",
+    "discription": "Smart home project including a web page hosted by a microcontroller (ESP32). With the help of a microcontroller and some sensors, the page shows the light status of the company building and the temperature of the server room. The user can also turn the lights on and off via the web page. The web page also includes a settings tab where the user can edit the microcontroller configuration. Here the user can change WiFi credentials and email recipients to receive warning emails when server room temperature exceeds limits, among other settings."
+  },
+  {
+    "name": "UPS Interactor",
+    "by": "By FABMation GmbH",
+    "languages": "C# / HTML / GO / Raspberry PI",
+    "img": "UPS.png",
+    "discription": "A program made using C# and HTML that reads data from a UPS (Uninterruptible Power Supply) over a serial connection and displays it on a web page, enabling a client to send commands to the UPS and receive specific data. The project was later recreated using the GO programming language and Single Board Computer (Raspberry PI 4), with the same functionality but without a GUI (Graphical User Interface) that notifies the user via email when changes occurre."
+  },
+  {
+    "name": "Panzer",
+    "by": "Personal Project",
+    "languages": "3D printing / Arduino / HTML / JavaScript / CSS / Flutter",
+    "img": "Panzer.jpg",
+    "discription": "The project started with 3D printing of tank components. Then I started working with a microcontroller (ESP32), motors, servos, LEDs and other circuits. After doing all the printing, installation and testing, I created a web page to control the motors and the other equipment. After all components worked fine, I made a mobile app to control my tank."
+  },
+  {
+    "name": "LED Strip controller",
+    "by": "Personal Project",
+    "languages": "3D printing / Arduino",
+    "img": "LEDs.jpg",
+    "discription": "These projects start with 3D printing light parts. Then I started using the microcontroller (ESP32), LED strip (WS2812B) and other circuits. After all printing, installation and testing are done. I used a mobile app to control the LED strip."
+  }
+]

@@ -3,10 +3,10 @@
     <div class="container">
       <MDBCard class="card navbar blod">
         <MDBNavbar id="navbar" light bg="light" container>
-          <div @click="navToHome()">Home</div>
-          <div @click="navToSkills()">Skills</div>
-          <div @click="navToProjects()">Projects</div>
-          <div @click="navToContactMe()">Contact</div>
+          <div class="navbtn" @click="navToHome()">Home</div>
+          <div class="navbtn" @click="navToSkills()">Skills</div>
+          <div class="navbtn" @click="navToProjects()">Projects</div>
+          <div class="navbtn" @click="navToContactMe()">Contact</div>
           <div class="space"></div>
           <div class="d-flex input-group w-auto">
             <div class="navIcon">
@@ -47,7 +47,7 @@
                 <h1>Mohammad Dallah.</h1>
               </div>
 
-              <h5 class="blod">Developer</h5>
+              <h5 class="blod">Full-Stack Developer</h5>
               <br />
 
               <div class="font">
@@ -69,7 +69,7 @@
                 </MDBRow>
                 <MDBRow>
                   <MDBCol class="blod" md="4">Email:</MDBCol>
-                  <MDBCol class="align-self-end" md="8">
+                  <MDBCol class="align-self-end navbtn" md="8" @click="navToContactMe()">
                     muhammaddallah093@gmail.com
                   </MDBCol>
                 </MDBRow>
@@ -87,8 +87,8 @@
             <MDBCard
               id="skillscard"
               class="skillscard blod"
-              v-for="skill in skills"
-              :key="skill.index"
+              v-for="(skill, index) in skills"
+              :key="index"
             >
               <img :src="'/img/logos/' + skill.logo" class="logos" />
               {{ skill.name }}
@@ -108,10 +108,12 @@
               v-for="(project, index) in projects"
               :key="index"
             >
-              <h5 class="blod">{{ project.name }} ({{ project.languages }})</h5>
+              <h5 class="blod">{{ project.name }}</h5>
+              {{ project.by }}
+              <br />
               <br />
               <MDBRow>
-                <MDBCol md="6">
+                <MDBCol md="4">
                   <img
                     :src="'/img/' + project.img"
                     v-bind:alt="project.img"
@@ -119,7 +121,6 @@
                     @click.stop="displayModalfunc(index)"
                   />
                   <div id="modal" v-if="displayModal && index === imgIndex">
-                    <!-- <h1 @click="displayModal = false">x</h1> -->
                     <div>
                       <img id="modal-img" :src="'/img/' + project.img" />
                       <img
@@ -129,9 +130,13 @@
                       />
                     </div>
                   </div>
-                  <!-- <button @click.stop="displayModal = true">open modal</button> -->
                 </MDBCol>
-                <MDBCol md="6">{{ project.discription }}</MDBCol>
+                <MDBCol md="8">
+                  {{ project.discription }}
+                  <br />
+                  <br />
+                  ({{ project.languages }})
+                </MDBCol>
               </MDBRow>
             </MDBCard>
           </div>

@@ -7,54 +7,8 @@ import {
 } from "mdb-vue-ui-kit";
 import { magicMouse } from "magicmouse.js";
 import emailjs from '@emailjs/browser';
-
-
-const skills: any = [
-    { name: "Vue.js", logo: "vuejs.png" },
-    { name: "TypeScript", logo: "typescript.png" },
-    { name: "Arduino", logo: "arduino.png" },
-    { name: "Node.js", logo: "node.png" },
-    { name: "HTML5", logo: "html5.png" },
-    { name: "CSS3", logo: "css3.png" },
-    { name: "JavaScript", logo: "javascript.png" },
-    { name: "C#", logo: "csharp.png" },
-    { name: "Golang", logo: "golang.png" },
-    { name: "Windows", logo: "windows.png" },
-    { name: "Linux", logo: "linux.png" },
-    { name: "Raspberry PI", logo: "raspberrypi.png" },
-    { name: "Electron", logo: "electron.svg" },
-    { name: "Ionic", logo: "ionic.png" },
-    { name: "Capacitor", logo: "capacitor.png" },
-    { name: "Cordova", logo: "cordova.png" },
-    { name: "MySQL", logo: "mysql.png" },
-    { name: "NoSQL", logo: "nosql.png" },
-    { name: "LoRa", logo: "lora.png" },
-    { name: "LoRaWAN", logo: "lorawan.svg" },
-    { name: "Git", logo: "git.png" },
-    { name: "Github", logo: "github.png" },
-    { name: "Gitlab", logo: "gitlab.png" },
-];
-
-const projects: any = [
-    {
-        name: "Portfolio",
-        languages: "Vue.js",
-        img: "comming-soon.jpg",
-        discription: "DISCRIPTION",
-    },
-    {
-        name: "PROJEKT-NAME",
-        languages: "L1 - L2",
-        img: "comming-soon.jpg",
-        discription: "DISCRIPTION",
-    },
-    {
-        name: "PROJEKT-NAME",
-        languages: "L1 - L2",
-        img: "comming-soon.jpg",
-        discription: "DISCRIPTION",
-    },
-];
+import projects from './Projects.json';
+import skills from './Skills.json';
 
 export default defineComponent({
     name: 'Portfolio',
@@ -175,31 +129,6 @@ export default defineComponent({
             Pointer.style.zIndex = "2";
         }
         // magicMouse .................................
-
-        // Email .................................
-        // const btn = document.getElementById('send') as HTMLInputElement;
-        // const form = document.getElementById('form');
-        // if (form != null) {
-        //     form.addEventListener('submit', function (event) {
-        //         event.preventDefault();
-        //         if (btn != null) {
-
-        //             btn.value = 'Sending...';
-
-        //             const serviceID = 'default_service';
-        //             const templateID = 'template_md-p';
-
-        //             emailjs.sendForm(serviceID, templateID, this.$)
-        //                 .then(() => {
-        //                     btn.value = 'Send Email';
-        //                     alert('Sent!');
-        //                 }, (err: any) => {
-        //                     btn.value = 'Send Email';
-        //                     alert(JSON.stringify(err));
-        //                 });
-        //         }
-        //     });
-        // }
     },
     setup() {
         const switchDM = ref(true);

@@ -17,7 +17,7 @@
   }
 
   .description-text h1:nth-child(2) {
-    font-size: 1.5em !important;
+    font-size: 2em !important;
   }
 
   .skillscard#skillscard {
@@ -101,6 +101,11 @@ section::after {
   display: contents;
 }
 
+.navbtn:hover {
+  color: #466682;
+  text-decoration: underline;
+}
+
 .space {
   width: 30em;
 }
@@ -126,7 +131,7 @@ section::after {
 }
 
 .font {
-  color: #355c7d;
+  color: #1c507c;
   font-size: 1rem;
 }
 
@@ -149,7 +154,7 @@ section::after {
 }
 
 .description-text h1:nth-child(1) {
-  color: #355c7d;
+  color: #1c507c;
   font-family: "Fira Code", monospace;
   font-weight: 800;
   font-size: 20px;
@@ -248,16 +253,22 @@ section::after {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   border: #00000038 solid 1px;
   width: auto;
-  margin: 2em 2em 0 0;
+  margin: 2em 0 0 0;
   padding: 1em;
   word-wrap: initial;
   border-radius: 6px;
 }
 
 .p-img {
-  width: 20em;
-  height: 20em;
-  border-radius: 5px;
+  /* width: 20em;
+  height: 20em; */
+  margin-top: 0.4em;
+  border-radius: 3px;
+  border: #00000055 solid 0.2em;
+}
+
+.p-img:hover {
+  border-color: #028db0;
 }
 
 #modal {
