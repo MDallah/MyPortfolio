@@ -23,6 +23,14 @@
   .skillscard#skillscard {
     margin: 0.5em !important;
   }
+
+  .myImg {
+    margin-top: -3.5em !important;
+  }
+
+  .description {
+    padding-top: 0em !important;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {
@@ -38,12 +46,20 @@
   .font {
     font-size: 0.9rem !important;
   }
+
+  .description {
+    padding-top: 1em !important;
+  }
 }
 
 @media screen and (min-width: 1201px) {
   .navbar {
     padding: 1em 0 !important;
     justify-content: left !important;
+  }
+
+  .description {
+    padding-top: 2em !important;
   }
 }
 /* Background ................................. */
@@ -124,7 +140,7 @@ section::after {
   border-radius: 15px;
   display: flex;
   justify-content: center;
-  padding: 6em;
+  padding: 3em;
   margin-bottom: 4em;
   opacity: 1;
   word-wrap: initial;
@@ -141,11 +157,15 @@ section::after {
 
 .myImg {
   transform: scaleX(-1);
-  filter: contrast(180%);
+  /* filter: contrast(100%); */
+  border-radius: 1em;
+  margin-top: -5em;
 }
 
 .description {
   white-space: nowrap;
+  padding-top: 3em;
+  padding-left: 2em;
 }
 .description-text {
   display: inline-block;

@@ -34,7 +34,7 @@
         <MDBRow>
           <MDBCol md="4">
             <img
-              src="../assets/developer.png"
+              src="../assets/Portfolio.png"
               class="img-fluid myImg"
               alt="..."
             />
