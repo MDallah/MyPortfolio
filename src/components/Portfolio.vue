@@ -69,7 +69,11 @@
                 </MDBRow>
                 <MDBRow>
                   <MDBCol class="blod" md="4">Email:</MDBCol>
-                  <MDBCol class="align-self-end navbtn" md="8" @click="navToContactMe()">
+                  <MDBCol
+                    class="align-self-end navbtn"
+                    md="8"
+                    @click="navToContactMe()"
+                  >
                     muhammaddallah093@gmail.com
                   </MDBCol>
                 </MDBRow>
@@ -186,6 +190,32 @@
               {{ btnValue }}
             </MDBBtn>
           </form>
+        </div>
+        <div>
+          <a
+            class="contactIcon"
+            href="https://www.linkedin.com/in/mohammad-dallah/"
+            target="blank"
+          >
+            <MDBIcon
+              icon="linkedin"
+              iconStyle="fab"
+              size="3x"
+              style="margin: 0.3em 0"
+            />
+          </a>
+          <a
+            class="contactIcon"
+            href="https://github.com/MDallah"
+            target="blank"
+          >
+            <MDBIcon
+              icon="github-square"
+              iconStyle="fab"
+              size="3x"
+              style="margin: 0.3em 0"
+            />
+          </a>
         </div>
       </MDBCard>
     </div>
