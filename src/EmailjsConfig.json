@@ -1,0 +1,14 @@
+[
+      {
+            "account": "muhammaddallah093",
+            "serviceID": "default_service",
+            "templateID": "template_md-p",
+            "publicKey": "0_ilaRpHbRPu01w1f"
+      },
+      {
+            "account": "mdtest093",
+            "serviceID": "service_md-p-test",
+            "templateID": "template_uoqrl6n",
+            "publicKey": "zNe5aa_VaIq88vNDi"
+      }
+]

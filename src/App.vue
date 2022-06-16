@@ -1,15 +1,15 @@
 <template>
-  <Portfolio />
+  <Home />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Portfolio from './components/Portfolio.vue';
+import Home from '@/pages/Home.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    Portfolio
+    Home
   }
 });
 </script>
@@ -20,7 +20,16 @@ export default defineComponent({
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #1c507c;
   margin-top: 60px;
+}
+
+.font {
+  color: #1c507c;
+  font-size: 1rem;
+}
+
+.blod {
+  font-weight: bold;
 }
 </style>
