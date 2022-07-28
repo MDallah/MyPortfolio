@@ -79,5 +79,6 @@ export default defineComponent({
 .logos {
   margin: 1em;
   opacity: 1;
+  max-height: 6em
 }
 </style>
