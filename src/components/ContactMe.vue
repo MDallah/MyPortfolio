@@ -10,6 +10,7 @@
           label="Name"
           name="from_name"
           wrapperClass="mb-4"
+          required
         />
 
         <!-- Email input -->
@@ -18,6 +19,7 @@
           label="Email address"
           name="from_email"
           wrapperClass="mb-4"
+          required
         />
 
         <!-- Subject input -->
@@ -26,6 +28,7 @@
           label="Subject"
           name="subject"
           wrapperClass="mb-4"
+          required
         />
 
         <!-- Message input -->
@@ -35,6 +38,7 @@
           id="formMsg"
           v-model="formMsg"
           wrapperClass="mb-4"
+          required
         />
 
         <!-- Submit button -->

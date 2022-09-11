@@ -2,7 +2,7 @@
   <MDBCard id="Home" class="card">
     <MDBRow>
       <MDBCol md="4">
-        <img src="@/assets/Portfolio.png" class="img-fluid myImg" alt="..." />
+        <img src="@/assets/coder.gif" class="img-fluid myImgx" alt="..." />
       </MDBCol>
       <MDBCol md="1"></MDBCol>
       <MDBCol md="7">
@@ -87,6 +87,10 @@ export default defineComponent({
     width: 16em;
   }
 
+  .myImgx {
+    width: 16em;
+  }
+
   .description {
     padding-top: 0em !important;
   }
@@ -113,6 +117,10 @@ export default defineComponent({
   /* filter: contrast(100%); */
   border-radius: 1em;
   margin-top: -5em;
+}
+
+.myImgx {
+  border-radius: 1em;
 }
 
 .description {
