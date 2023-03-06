@@ -1,15 +1,18 @@
 <template>
+  <Panner />
   <Home />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import Home from '@/pages/Home.vue';
+import Panner from '@/components/Panner.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    Home
+    Home,
+    Panner
   }
 });
 </script>
@@ -21,7 +24,7 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #1c507c;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 
 .font {
